@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página Inicial</title>
+  <style>
+    /* Estilos CSS da página dashboard.html */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+    }
+    .logo {
+      width: 200px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 20px;
+      text-align: left;
+    }
+    h1 {
+      color: #4CAF50;
+      margin-top: 0;
+    }
+    p {
+      color: #666;
+      text-align: left;
+    }
+    .download-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .download-link a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .download-link a:hover {
+      background-color: #45a049;
+    }
+    .introduction {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .manual {
+      display: none;
+      margin-top: 20px;
+      animation: fade-in 1s;
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .back-button {
+      float: left;
+      margin-top: 10px;
+      background-color: #555;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #444;
+    }
+  </style>
+  <script>
+    function toggleManual() {
+      var manual = document.getElementById("manual");
+      if (manual.style.display === "block") {
+        manual.style.display = "none";
+      } else {
+        manual.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <button class="back-button" onclick="window.location.href='login.html'">Voltar</button>
+    <img class="logo" src="sistemas.png" alt="Sistemas">
+  </div>
+  <div class="container">
+    <h1>Conheça o Sistema de Ramais</h1>
+    <div class="introduction">
+      <p>O Sistema de Ramais foi projetado para facilitar a gestão e consulta dos ramais em uma determinada empresa. Com ele, é possível realizar as seguintes funcionalidades:</p>
+      <ul>
+        <li>Consulta rápida e prática dos ramais e nomes dos colaboradores.</li>
+        <li>Criação de novos clientes e seus respectivos ramais.</li>
+        <li>Modificação dos dados dos clientes, permitindo atualizações sempre que necessário.</li>
+        <li>Exclusão de clientes e seus respectivos ramais, de forma segura e controlada.</li>
+      </ul>
+      <p>O Sistema de Ramais torna a administração dos contatos internos mais eficiente, agilizando a comunicação e otimizando o processo de busca de informações. Experimente essa ferramenta intuitiva e fácil de usar para manter sua empresa conectada e organizada.</p>
+    </div>
+
+    <div class="download-link">
+      <a href="base de teste.zip" download>Baixar Arquivo ZIP</a>
+    </div>
+
+    <button onclick="toggleManual()">Mostrar Manual</button>
+
+    <div id="manual" class="manual">
+      <h1>Manual do Sistema de Ramais</h1>
+      <p>
+        <strong>1. Acesso ao sistema:</strong><br>
+        Localize a pasta onde o sistema "Sistemas de Ramais" está instalado.
+      </p>
+      <p>
+        <strong>2. Verificação do banco de dados:</strong><br>
+        Dentro da pasta do sistema, certifique-se de que existe um arquivo de banco de dados chamado "ramais.db" (ou similar).
+      </p>
+      <p>
+        <strong>3. Executar o sistema:</strong><br>
+        Caso o banco de dados esteja presente, basta executar o sistema normalmente.
+      </p>
+      <p>
+        <strong>4. Cadastro de ramais:</strong><br>
+        Ao executar o sistema, siga as instruções para cadastrar novos ramais.<br>
+        Informe os nomes e ramais dos usuários conforme solicitado.
+      </p>
+      <p>
+        <strong>5. Edição e exclusão de usuários:</strong><br>
+        O sistema deve possuir uma opção para editar e excluir usuários cadastrados.<br>
+        Procure por essa opção no menu ou interface do sistema.<br>
+        Escolha a opção desejada (editar ou excluir) e siga as instruções do sistema para concluir a ação.
+      </p>
+      <p>
+        <strong>Observação adicional:</strong><br>
+        Caso não exista um banco de dados criado ao executar o programa, o sistema "Sistemas de Ramais" irá automaticamente criar um novo banco de dados vazio para armazenar as informações dos usuários.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
