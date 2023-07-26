@@ -2,76 +2,23 @@
 <html>
 <head>
   <title>Login</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    .login-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-      padding: 30px;
-    }
-    .logo {
-      width: 150px;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <link rel="stylesheet" href="styless.css">
 </head>
 <body>
   <div class="login-container">
-    <img class="logo" src="sistemas.png" alt="Sistemas">
+    <img class="logo" src="bruno tech.png" alt="Sistemas">
     <form>
       <input type="text" id="email" name="email" placeholder="Email">
       <br>
       <input type="password" id="password" name="password" placeholder="Senha">
       <br>
       <button type="button" onclick="login()">Login</button>
+      <p>Não possui uma conta? <a class="create-account" href="registro.html">Crie uma conta</a></p>
     </form>
   </div>
-  <script>
-    function login() {
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      
-      // Verificar se o email e a senha correspondem ao usuário esperado
-      if (email === "bruno.martinssistemas@gmail.com" && password === "Trimix340#") {
-        window.location.href = "principal.html"; // Redirecionar para a página após o login ser aprovado
-      } else {
-        alert("Login inválido. Por favor, verifique suas credenciais.");
-      }
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
+
+
 
