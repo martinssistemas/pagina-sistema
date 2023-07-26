@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
-  <link rel="stylesheet" href="styless.css">
+  <title>Login com Google</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="SEU_CLIENT_ID_DO_GOOGLE">
 </head>
 <body>
   <div class="login-container">
     <img class="logo" src="bruno tech.png" alt="Sistemas">
-    <form>
-      <input type="text" id="email" name="email" placeholder="Email">
-      <br>
-      <input type="password" id="password" name="password" placeholder="Senha">
-      <br>
-      <button type="button" onclick="login()">Login</button>
-      <p>Não possui uma conta? <a class="create-account" href="registro.html">Crie uma conta</a></p>
-    </form>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <p>Não possui uma conta? <a class="create-account" href="registro.html">Crie uma conta</a></p>
   </div>
   <script src="app.js"></script>
 </body>
