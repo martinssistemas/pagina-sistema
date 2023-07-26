@@ -62,17 +62,6 @@ function register() {
   }
 }
 
-// Função para realizar o logout
-function logout() {
-  // Remover a marcação de usuário logado do localStorage
-  localStorage.removeItem('loggedIn');
-  // Redirecionar para a página de login após o logout
-  window.location.href = "index.html";
-}
-
-// Verificar se o usuário está logado e redirecionar para a página de portfólio se estiver
-if (isUserLoggedIn()) {
-  redirectToPortfolio();
 }
 
 
