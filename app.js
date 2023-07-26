@@ -1,58 +1,31 @@
-// Função para buscar os usuários cadastrados no LocalStorage
-function getUsers() {
-  return JSON.parse(localStorage.getItem("users")) || [];
-}
+// Função que é chamada após o usuário fazer login com o Google
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  var email = profile.getEmail();
 
-function login() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  
-  // Buscar os usuários cadastrados
-  var users = getUsers();
+  // Aqui, você pode verificar se o email recebido existe no seu sistema ou não.
+  // Se existir, você pode permitir o login. Caso contrário, exiba uma mensagem de erro ou crie uma conta para o usuário.
 
-  // Verificar se o email e a senha correspondem a algum usuário cadastrado
+  // Exemplo de verificação do email no sistema (usando o LocalStorage apenas para fins educacionais):
+  var users = getUsersFromLocalStorage();
   var user = users.find(function(user) {
-    return user.email === email && user.password === password;
+    return user.email === email;
   });
 
   if (user) {
-    alert("Login bem-sucedido! Redirecionando para a página principal.");
+    // Email existe no sistema, permita o login
+    alert("Login com Google bem-sucedido! Redirecionando para a página principal.");
     window.location.href = "janela.html"; // Redirecionar para a página após o login ser aprovado
   } else {
-    alert("Login inválido. Por favor, verifique suas credenciais.");
+    // Email não existe no sistema, exiba uma mensagem de erro ou crie uma conta para o usuário.
+    alert("Você não possui uma conta registrada. Faça login com outra conta ou crie uma nova conta.");
   }
 }
 
-function createAccount() {
-  var newEmail = document.getElementById("newEmail").value;
-  var newPassword = document.getElementById("newPassword").value;
-
-  // Verificar se o email e senha estão preenchidos
-  if (!newEmail || !newPassword) {
-    alert("Por favor, preencha todos os campos.");
-    return;
-  }
-
-  // Buscar os usuários cadastrados
-  var users = getUsers();
-
-  // Verificar se o email já está cadastrado
-  var existingUser = users.find(function(user) {
-    return user.email === newEmail;
-  });
-
-  if (existingUser) {
-    alert("Este email já está cadastrado. Por favor, escolha outro.");
-  } else {
-    // Criar novo usuário e salvar no LocalStorage
-    var newUser = {
-      email: newEmail,
-      password: newPassword
-    };
-    users.push(newUser);
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Conta criada com sucesso! Faça login para acessar a página principal.");
-    window.location.href = "index.html"; // Redirecionar para a página de login após criar a conta
-  }
+// Função para buscar os usuários cadastrados no LocalStorage (apenas para fins educacionais)
+function getUsersFromLocalStorage() {
+  return JSON.parse(localStorage.getItem("users")) || [];
 }
+
+// Resto do código existente aqui...
+
