@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Tecnologia - Login</title>
+  <title>Login</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="login-container">
-    <img class="logo" src="bruno tech.png" alt="Bruno Tech Logo">
-    <form>
-      <input type="text" id="email" name="email" placeholder="Email">
-      <br>
-      <input type="password" id="password" name="password" placeholder="Senha">
-      <br>
-      <button type="button" onclick="login()">Login</button>
-      <p>Não possui uma conta? <a class="create-account" href="registro.html">Crie uma conta</a></p>
+    <h1>Bem-vindo ao Meu Portfólio</h1>
+    <form onsubmit="return login()">
+      <input type="text" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Senha">
+      <button type="submit">Entrar</button>
     </form>
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
