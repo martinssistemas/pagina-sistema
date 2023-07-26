@@ -1,6 +1,3 @@
-// Array para armazenar as contas criadas
-var accounts = [];
-
 // Função para realizar o login
 function login() {
   var email = document.getElementById("email").value;
@@ -11,6 +8,9 @@ function login() {
     alert("Por favor, preencha o email e a senha.");
     return false;
   }
+
+  // Obter as contas registradas do localStorage
+  var accounts = JSON.parse(localStorage.getItem('accounts')) || [];
 
   // Verificar se o email e senha correspondem a um usuário registrado
   var foundAccount = accounts.find(function(account) {
@@ -39,6 +39,9 @@ function register() {
     return false;
   }
 
+  // Obter as contas registradas do localStorage
+  var accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+
   // Verificar se o email já está registrado
   var isEmailRegistered = accounts.some(function(account) {
     return account.email === email;
@@ -48,15 +51,15 @@ function register() {
     alert("Este email já está registrado. Por favor, faça o login.");
     return false;
   } else {
-    // Registrar o novo usuário
+    // Registrar o novo usuário e salvar no localStorage
     accounts.push({ email: email, password: password });
+    localStorage.setItem('accounts', JSON.stringify(accounts));
     alert("Conta criada com sucesso! Faça o login para acessar a página principal.");
     // Redirecionar para a página de login após o registro ser concluído
     window.location.href = "index.html";
     return false;
   }
 }
-
 
 
 
