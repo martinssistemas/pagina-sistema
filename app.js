@@ -1,31 +1,29 @@
-// Função que é chamada após o usuário fazer login com o Google
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  var email = profile.getEmail();
+function login() {
+  // Aqui você pode implementar a lógica de login, verificando as credenciais do usuário no banco de dados.
+  // Por simplicidade, vamos apenas verificar se o email e a senha são preenchidos.
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
 
-  // Aqui, você pode verificar se o email recebido existe no seu sistema ou não.
-  // Se existir, você pode permitir o login. Caso contrário, exiba uma mensagem de erro ou crie uma conta para o usuário.
-
-  // Exemplo de verificação do email no sistema (usando o LocalStorage apenas para fins educacionais):
-  var users = getUsersFromLocalStorage();
-  var user = users.find(function(user) {
-    return user.email === email;
-  });
-
-  if (user) {
-    // Email existe no sistema, permita o login
-    alert("Login com Google bem-sucedido! Redirecionando para a página principal.");
-    window.location.href = "janela.html"; // Redirecionar para a página após o login ser aprovado
-  } else {
-    // Email não existe no sistema, exiba uma mensagem de erro ou crie uma conta para o usuário.
-    alert("Você não possui uma conta registrada. Faça login com outra conta ou crie uma nova conta.");
+  if (email.trim() === "" || password.trim() === "") {
+    alert("Por favor, preencha o email e a senha.");
+    return;
   }
+
+  // Resto da lógica de login
 }
 
-// Função para buscar os usuários cadastrados no LocalStorage (apenas para fins educacionais)
-function getUsersFromLocalStorage() {
-  return JSON.parse(localStorage.getItem("users")) || [];
+function register() {
+  // Aqui você pode implementar a lógica de registro de usuário, salvando as informações do novo usuário no banco de dados.
+  // Por simplicidade, vamos apenas verificar se o email e a senha são preenchidos.
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  if (email.trim() === "" || password.trim() === "") {
+    alert("Por favor, preencha o email e a senha para criar uma conta.");
+    return;
+  }
+
+  // Resto da lógica de registro
 }
 
-// Resto do código existente aqui...
 
