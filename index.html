@@ -3,33 +3,22 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="styles.css">
-  <meta name="referrer" content="no-referrer">
 </head>
 <body>
   <div class="login-container">
-    <img class="logo" src="Bruno Tech.png" alt="Sistemas">
+    <img class="logo" src="sistemas.png" alt="Sistemas">
     <form>
       <input type="text" id="email" name="email" placeholder="Email">
       <br>
       <input type="password" id="password" name="password" placeholder="Senha">
       <br>
       <button type="button" onclick="login()">Login</button>
+      <p>Não possui uma conta? <a class="create-account" href="registro.html">Crie uma conta</a></p>
     </form>
   </div>
-  <script>
-    function login() {
-      var currentURL = window.location.href;
-
-      // Verificar se a URL é válida (deve ser "http://localhost/" neste exemplo)
-      if (!currentURL.startsWith("http://localhost/")) {
-        alert("Erro: Esta página não pode ser acessada a partir desta origem.");
-        return;
-      }
-
-      // Resto da sua lógica de login aqui...
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
+
 
 
