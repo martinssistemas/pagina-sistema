@@ -9,7 +9,16 @@ function login() {
     return;
   }
 
-  // Resto da lógica de login
+  // Verificar se as credenciais correspondem a uma conta registrada (substitua esta lógica com uma chamada ao banco de dados)
+  var registeredEmail = "usuario@exemplo.com";
+  var registeredPassword = "senha123";
+
+  if (email === registeredEmail && password === registeredPassword) {
+    // Redirecionar para a página principal (portfólio)
+    window.location.href = "portifolio.html";
+  } else {
+    alert("Credenciais inválidas. Por favor, verifique o email e a senha.");
+  }
 }
 
 function register() {
@@ -25,5 +34,4 @@ function register() {
 
   // Resto da lógica de registro
 }
-
 
