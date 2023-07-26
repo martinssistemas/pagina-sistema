@@ -1,0 +1,59 @@
+/* Estilos existentes aqui */
+
+/* Estilo do link de criar conta e voltar */
+.create-account,
+.back-to-login {
+  text-decoration: none;
+  color: #4CAF50;
+  font-size: 14px;
+}
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

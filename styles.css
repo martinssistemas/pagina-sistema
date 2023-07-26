@@ -1,0 +1,147 @@
+/* Reset de estilos para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+}
+
+/* Estilo da seção "Hero" */
+.hero {
+    height: 500px;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #f8f8f8;
+    font-size: 1.2rem;
+}
+
+/* Estilo da seção "Sobre Mim" */
+.about {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 30px;
+}
+
+.about p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Estilo da seção "Projetos" */
+.projects {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.project {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.project img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilo da seção "Contato" */
+.contact {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
