@@ -1,6 +1,14 @@
-// Buscar os usuários registrados do localStorage quando o script é carregado
-var registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+// Função para redirecionar para a página de portfólio após o login ser aprovado
+function redirectToPortfolio() {
+  window.location.href = "portifolio.html";
+}
 
+// Função para verificar se o usuário está logado
+function isUserLoggedIn() {
+  return localStorage.getItem('loggedIn') === 'true';
+}
+
+// Função para realizar o login
 function login() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -17,13 +25,16 @@ function login() {
   });
 
   if (foundUser) {
+    // Marcar o usuário como logado no localStorage
+    localStorage.setItem('loggedIn', 'true');
     // Redirecionar para a página principal (portfólio)
-    window.location.href = "portifolio.html";
+    redirectToPortfolio();
   } else {
     alert("Credenciais inválidas. Por favor, verifique o email e a senha.");
   }
 }
 
+// Função para realizar o registro
 function register() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -50,4 +61,18 @@ function register() {
     window.location.href = "index.html";
   }
 }
+
+// Função para realizar o logout
+function logout() {
+  // Remover a marcação de usuário logado do localStorage
+  localStorage.removeItem('loggedIn');
+  // Redirecionar para a página de login após o logout
+  window.location.href = "index.html";
+}
+
+// Verificar se o usuário está logado e redirecionar para a página de portfólio se estiver
+if (isUserLoggedIn()) {
+  redirectToPortfolio();
+}
+
 
