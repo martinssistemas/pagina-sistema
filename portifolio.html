@@ -1,48 +1,235 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .portfolio-item {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #f1f1f1; /* Tema cinza */
+      text-align: center;
+    }
+
+    .portfolio-item img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 0.3s; /* Adicionando a transição na escala */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.1); /* Aumentando em 10% a escala ao passar o mouse */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Estilos para centralizar */
+    .text-center {
+      text-align: center;
+    }
+
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Estilos para o texto de boas-vindas */
+    .welcome-text {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Definindo a altura para ocupar a tela inteira verticalmente */
+    }
+
+    /* Estilos para o parágrafo de apresentação */
+    .intro-text {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Estilos para o formulário de contato */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #444;
+    }
+
+    .bruno-tech {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
   <header>
-    <nav>
-      <div class="logo">Meu Portfólio</div>
-    </nav>
+    <div class="container">
+      <h1>Meu Portfólio</h1>
+      <img src="logo.png" alt="Logo" class="logo">
+      <nav>
+        <ul>
+          <!-- Deletando as li abaixo para remover os itens do menu -->
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Bem-vindo ao Meu Portfólio!</h1>
-      <p>Confira meus projetos incríveis.</p>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projetos</h2>
-    <div class="project-grid">
-      <!-- Insira seus projetos aqui -->
-      <div class="project">
-        <img src="project1.jpg" alt="Projeto 1">
-        <h3>Projeto 1</h3>
-        <p>Descrição do Projeto 1.</p>
+  <section id="home">
+    <div class="container text-center">
+      <div class="welcome-text">
+        Seja bem-vindo(a) ao meu Portfólio
       </div>
-      <div class="project">
-        <img src="project2.jpg" alt="Projeto 2">
-        <h3>Projeto 2</h3>
-        <p>Descrição do Projeto 2.</p>
+      <div class="intro-text">
+        Olá, eu sou o Bruno Martins! Este é o meu portfólio onde compartilho alguns dos meus projetos e experiências como programador.
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>Todos os direitos reservados &copy; 2023</p>
-  </footer>
+  <section id="about">
+    <div class="container text-center">
+      <h2>Meus Projetos</h2>
+      <div class="center-container">
+        <div class="portfolio-item">
+          <h3>Sistema De Ramais</h3>
+          <!-- Substitua "URL_DA_IMAGEM1" pelo link da imagem 300x300 do projeto 1 -->
+          <img src="ramais.png" alt="Projeto 1">
+          <p>Em Produção</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Sistemas De Chat</h3>
+          <!-- Substitua "URL_DA_IMAGEM2" pelo link da imagem 300x300 do projeto 2 -->
+          <img src="chat.png" alt="Projeto 2">
+          <p>Em Produção</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Projeto 3</h3>
+          <!-- Substitua "URL_DA_IMAGEM3" pelo link da imagem 300x300 do projeto 3 -->
+          <img src="cadastro.png" alt="Projeto 3">
+          <p>Em Produção</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container text-center">
+      <h2>Contato</h2>
+      <form class="center-container">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea><br>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </section>
+
+  <div class="bruno-tech text-center">Bruno Tech</div>
 </body>
-</html>
 
+</html>
 
 
