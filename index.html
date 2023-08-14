@@ -1,23 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download de Arquivos</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #333;
+  }
+  .download-link {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .download-link:hover {
+    background-color: #0056b3;
+  }
+</style>
 </head>
 <body>
-  <div class="login-container">
-    <img class="logo" src="bruno tech.png" alt="Bruno Tech Logo">
-    <form onsubmit="return login()">
-      <input type="text" id="email" placeholder="Email">
-      <input type="password" id="password" placeholder="Senha">
-      <button type="submit">Entrar</button>
-    </form>
-    <p>Não possui uma conta? <a class="create-account" href="registro.html">Crie uma conta</a></p>
+  <div class="container">
+    <h1>Download de Arquivos</h1>
+    <a class="download-link" href="chat.exe" download>Sistema de Chat</a>
+    <a class="download-link" href="caminho_para_arquivo2.zip" download>Download Arquivo 2</a>
+    <a class="download-link" href="caminho_para_arquivo3.txt" download>Download Arquivo 3</a>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>
-
